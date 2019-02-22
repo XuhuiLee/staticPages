@@ -27,20 +27,19 @@
             width: 57%;
             height: 550px;
         }
-
+        .search-right-context {
+            margin-top: 200px;
+        }
         .search-float {
             position: absolute;
             z-index: 10;
-            width: 1000px;
-            margin: auto;
-            margin-left: 25%;
-            padding: 200px 0;
+            top: 200px;
+            color: white;
         }
 
         .search-title {
             font-size: 200%;
             border: 3px solid #fff;
-            margin-left: 20px;
             padding: 20px;
             width: 300px;
         }
@@ -48,11 +47,10 @@
             margin-top: 30px;
             width: 300px;
             text-align: left;
-            padding-left: 30px;
+            padding-left: 15px;
         }
         .search-input {
             margin-top: 40px;
-            width: 52%;
         }
 
         .get-btn {
@@ -61,27 +59,27 @@
 
         .blog {
             background: #fff;
+            padding: 100px 0;
         }
-
         .blog-h2 {
             color: #5f6c6d;
             text-align: center;
             font-size: 150%;
             margin: 40px 0;
         }
-
         .blog-h3 {
             color: #6f7c7d;
             border: 2px solid;
             padding: 5px 10px;
         }
-
         .blog-p {
             color: #7f8c8d;
         }
-
         .blog-mb {
             margin-bottom: 30px;
+        }
+        .blog-desc {
+            margin-top: 90px;
         }
 
         .blog-padding-top {
@@ -90,24 +88,36 @@
 
         .img {
             background: #3bb4f2;
-            padding: 50px 0;
+            padding: 100px 0;
             color: #fff;
         }
-
         .img-h2 {
             text-align: center;
             font-size: 150%;
             margin: 40px 0;
         }
-
         .img-h3 {
+            margin-top: 30px;
             border-color: #149C88;
-            border: 2px solid;
             padding: 5px 10px;
+        }
+        .img-absolute-pic-1 {
+            position:absolute;
+            left:45%;
+            top:30px;
+            width: 150px;
+            box-shadow: 5px 5px 5px #1E5B94;
+        }
+        .img-absolute-pic-2 {
+            position:absolute;
+            left:65%;
+            top:130px;
+            width: 150px;
+            box-shadow: 5px 5px 5px #1E5B94;
         }
 
         .more {
-            padding: 50px 0;
+            padding: 100px 0;
         }
 
         .more-hr {
@@ -134,12 +144,39 @@
             text-align: center;
         }
 
+        .footer {
+            padding: 20px;
+            color: #999;
+            background: #333;
+        }
+        .footer-left {
+        }
+        .footer-right {
+            border-left: 1px solid #666;
+        }
         .footer p {
-            color: #7f8c8d;
             margin: 0;
             padding: 15px 0;
             text-align: center;
-            background: #2d3e50;
+        }
+
+        @-webkit-keyframes shake {
+            0% { opacity: 1; }
+            50% { opacity: 1; }
+            50.01% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes shake {
+            0% { opacity: 1; }
+            50% { opacity: 1; }
+            50.01% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        .shake {
+            -webkit-animation: shake 1.2s infinite;
+            animation: shake 1.2s infinite;
         }
     </style>
 </head>
@@ -160,19 +197,21 @@
     <div class="search-left am-u-md-5">
     </div>
     <div class="search-right am-u-md-7">
+        <div class="am-g search-right-context am-g-collapse"><div class="am-text-xxxl am-u-lg-offset-1 am-u-md-5 am-text-right">Create Art Technology&nbsp;</div><div class="am-text-xxxl shake am-u-md-1 am-u-end am-text-left">_</div></div>
     </div>
-    <div class="am-g">
-        <div class="am-u-lg-12 search-float">
-            <h1 class="search-title">欢迎来到 C.A.T !</h1>
-            <div class="search-desc">C.A.T 首页建设中...</div>
-            <div class="search-input">
-                <div class="am-u-sm-centered">
-                    <div class="am-input-group">
-                        <input type="text" class="am-form-field" placeholder=" 全站搜索尚在排期中...">
-                        <span class="am-input-group-btn">
-                            <button class="am-btn am-btn-default" type="button"><span class="am-icon-spinner am-icon-pulse"></span> </button>
-                        </span>
-                    </div>
+</div>
+
+<div class="am-g">
+    <div class="am-u-lg-offset-3 am-u-lg-12 search-float" data-am-scrollspy="{animation: 'fade', delay: 200, repeat: false}">
+        <h1 class="search-title am-radius">欢迎来到 C.A.T !</h1>
+        <div class="search-desc">C.A.T 首页建设中...</div>
+        <div class="search-input">
+            <div class="am-g">
+                <div class="am-input-group am-u-md-3">
+                    <input type="text" class="am-form-field" placeholder=" 全站搜索尚在排期中...">
+                    <span class="am-input-group-btn">
+                                <button class="am-btn am-btn-default" type="button"><span class="am-icon-spinner am-icon-pulse"></span> </button>
+                            </span>
                 </div>
             </div>
         </div>
@@ -182,54 +221,54 @@
 <div class="blog">
     <div class="am-g am-container">
         <a href="/blog">
-        <div class="am-u-lg-12">
-            <h2 class="blog-h2"> 博客分站 /blog</h2>
+            <div class="am-u-lg-12">
+                <h2 class="blog-h2"> 博客 /blog</h2>
 
-            <div class="am-g">
-                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
-                    <h3 class="blog-h3 am-round">
-                        <i class="am-icon-area-chart"></i>
-                        计划与进展
-                    </h3>
+                <div class="blog-desc">
+                    <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+                        <h3 class="blog-h3 am-round">
+                            <i class="am-icon-area-chart"></i>
+                            计划与进展
+                        </h3>
 
-                    <p class="blog-p">
-                        C.A.T的内容策划、模块开发、开源工具使用等等的具体细分计划和开发进展记录。
-                    </p>
-                </div>
-                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb blog-padding-top">
+                        <p class="blog-p">
+                            C.A.T的内容策划、模块开发、开源工具使用等等的具体细分计划和开发进展记录。
+                        </p>
+                    </div>
+                    <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb blog-padding-top">
 
-                    <h3 class="blog-h3 am-round">
-                        <i class="am-icon-edit"></i>
-                        学习笔记
-                    </h3>
+                        <h3 class="blog-h3 am-round">
+                            <i class="am-icon-edit"></i>
+                            学习笔记
+                        </h3>
 
-                    <p class="blog-p">
-                        从最基础的Java学习、Linux学习，到开源工具、高级技术的学习，合适的内容会尽量记录在博客里。
-                    </p>
-                </div>
-                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
-                    <h3 class="blog-h3 am-round">
-                        <i class="am-icon-wrench"></i>
-                        工具使用
-                    </h3>
+                        <p class="blog-p">
+                            从最基础的Java学习、Linux学习，到开源工具、高级技术的学习，合适的内容会尽量记录在博客里。
+                        </p>
+                    </div>
+                    <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+                        <h3 class="blog-h3 am-round">
+                            <i class="am-icon-wrench"></i>
+                            工具使用
+                        </h3>
 
-                    <p class="blog-p">
-                        在建站过程或日常工作过程中使用到多种工具，将介绍、使用方法、配置优化等内容经过整理后归档，保证都是亲自验证过的。
-                    </p>
-                </div>
-                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb blog-padding-top">
-                    <h3 class="blog-h3 am-round">
-                        <i class="am-icon-frown-o"></i>
-                        踩坑经验
-                    </h3>
+                        <p class="blog-p">
+                            在建站过程或日常工作过程中使用到多种工具，将介绍、使用方法、配置优化等内容经过整理后归档，保证都是亲自验证过的。
+                        </p>
+                    </div>
+                    <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb blog-padding-top">
+                        <h3 class="blog-h3 am-round">
+                            <i class="am-icon-frown-o"></i>
+                            踩坑经验
+                        </h3>
 
-                    <p class="blog-p">
-                        记录工作、学习中踩过的坑，每一篇都是绝对的血泪史。
-                    </p>
+                        <p class="blog-p">
+                            记录工作、学习中踩过的坑，每一篇都是绝对的血泪史。
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </a>
+        </a>
     </div>
     <br>
 </div>
@@ -237,40 +276,44 @@
 <div class="img">
     <div class="am-g am-container">
         <a href="/img" style="color: white">
-        <div class="am-u-lg-12">
-            <h2 class="img-h2"> 图库分站 /img</h2>
+            <div class="am-u-lg-12" data-am-scrollspy="{animation: 'fade', delay: 400, repeat: false}">
+                <h2 class="img-h2"> 图库 /img</h2>
 
-            <div class="am-g">
-                <div class="am-u-lg-6 am-u-md-6 am-u-sm-12 detail-mb">
-                    <h3 class="img-h3 am-round">
-                        <i class="am-icon-picture-o"></i>
-                        预览区及图片展示区
-                    </h3>
+                <div class="am-u-lg-6">
+                    <div class="detail-mb">
+                        <h2 class="img-h3">
+                            <i class="am-icon-picture-o"></i>
+                            预览区及图片展示区
+                        </h2>
 
-                    <p class="img-p">
-                        目前带有简单的防盗链功能，后续考虑增强。
-                    </p>
+                        <p class="img-p">
+                            目前带有简单的防盗链功能，后续考虑增强。
+                        </p>
+                    </div>
+                    <div class="detail-mb">
+                        <h2 class="img-h3">
+                            <i class="am-icon-paint-brush"></i>
+                            图片上传及编辑功能
+                        </h2>
+
+                        <p class="img-p">
+                            目前仅有简单的上传、展示接口，后续考虑增加切图、缩放、水印等高级功能。
+                        </p>
+                    </div>
                 </div>
-                <div class="am-u-lg-6 am-u-md-6 am-u-sm-12 detail-mb">
 
-                    <h3 class="img-h3 am-round">
-                        <i class="am-icon-paint-brush"></i>
-                        图片上传及编辑功能
-                    </h3>
-
-                    <p class="img-p">
-                        目前仅有简单的上传、展示接口，后续考虑增加切图、缩放、水印等高级功能。
-                    </p>
+                <div class="am-u-lg-6">
+                <img class="img-absolute-pic-1 am-radius" src="http://www.createarttechnology.com/img/pic/2019021311184343700_png_130_148_948">
+                <img class="img-absolute-pic-2 am-radius" src="http://www.createarttechnology.com/img/pic/2019022216425984809_png_180_180_44765">
                 </div>
             </div>
-        </div>
         </a>
     </div>
 </div>
 
 <div class="more">
     <div class="am-g am-container">
-        <div class="am-u-lg-8 am-u-md-6 am-u-sm-12">
+        <div class="am-u-lg-8 am-u-md-6 am-u-sm-12" data-am-scrollspy="{animation: 'fade', delay: 400, repeat: false}">
             <h2 class="more-title">更多模块准备中......</h2>
 
             <p>
@@ -281,7 +324,23 @@
 </div>
 
 <footer class="footer">
-    <p>© 2019 Lee E-mail : 409322621@qq.com <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备15060321号</a></p>
+    <div class="am-g am-container" hidden>
+        <div class="am-u-lg-12 am-u-lg-centered">
+            <div class="footer-left am-u-lg-offset-1 am-u-lg-4">
+                <strong class="am-text-sm am-text-bold">关于我</strong>
+                <p>Lee</p>
+                <p>E-mail:409322621@qq.com</p>
+            </div>
+            <div class="footer-right am-u-lg-offset-1 am-u-lg-4 am-text-left">
+                <strong class="am-text-sm am-text-bold">提交建议</strong>
+                <ul>
+                    <li></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <p>© 2015-2019 Lee CreateArtTechnology.com E-mail:409322621@qq.com <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备15060321号</a></p>
 </footer>
 
 <!--[if lt IE 9]>
@@ -291,7 +350,7 @@
 <![endif]-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="/sf/amazeui/js/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <!--<![endif]-->
 <script src="/sf/amazeui/js/amazeui.min.js"></script>
 </body>
